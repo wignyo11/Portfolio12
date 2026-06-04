@@ -11,7 +11,7 @@ function Intro({ onFinish }) {
     // 1: portal يظهر
     setTimeout(() => setPhase(1), 300);
 
-    // 2: يظهر AMINE
+    // 2: يظهر ATMAJA
     setTimeout(() => setPhase(2), 1200);
 
     // 3: explosion
@@ -35,7 +35,7 @@ function Intro({ onFinish }) {
     }, 5000);
 
     return () => clearInterval(typing);
-  }, []);
+  }, [onFinish]);
 
   return (
     <div className={`intro phase-${phase}`}>
@@ -44,7 +44,7 @@ function Intro({ onFinish }) {
       <div className="portal"></div>
 
       {/* LOGO */}
-      <h1 className="logo">AMINE</h1>
+      <h1 className="logo">ATMAJA</h1>
 
       {/* TEXT */}
       <h1 className="main-text">

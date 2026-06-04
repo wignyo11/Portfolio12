@@ -1,104 +1,73 @@
 import "./Projects.css";
-
-import img1 from "../../assets/images/Cleveroad.jpg";
-import img2 from "../../assets/images/Cap.png";
-import img3 from "../../assets/images/Weather Forecast Dashboard.jpg";
-import img4 from "../../assets/images/WordPress dashboard design concept.jpg";
-import img5 from "../../assets/images/Game Dashboard Design.jpg";
-import img6 from "../../assets/images/Task manager app.jpg";
+import thumb1 from "../../assets/images/proyek1.jpg";
+import thumb2 from "../../assets/images/proyek2.jpg";
+import thumb3 from "../../assets/images/proyek3.jpg";
 
 const projects = [
   {
-    title: "E-Commerce Website",
-    img: img1,
-    desc: "Modern online store with product filtering, cart, and payment system.",
-    skills: ["HTML", "CSS", "JavaScript"]
+    title: "Aftermovie HUT UKM Kader Konservasi 2025",
+    img: thumb1,
+    desc: "Bertanggung jawab penuh atas pengambilan video (videografi) dan proses penyuntingan (editing) untuk merangkum kemeriahan perayaan HUT UKM.",
+    skills: ["CapCut", "PicsArt", "Videography"],
+    link: "https://www.instagram.com/reel/DO2urZADFfO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
-
   {
-    title: "Portfolio Website",
-    img: img2,
-    desc: "Personal portfolio to showcase my design and coding projects.",
-    skills: ["HTML", "CSS", "Bootstrap"]
+    title: "Aftermovie G-FEST 2025",
+    img: thumb2,
+    desc: "Mendokumentasikan festival universitas di SMAN 1 Batang dan mengemasnya menjadi video aftermovie sinematik dengan bantuan teknologi AI.",
+    skills: ["CapCut", "Gemini Veo 3", "Videography"],
+    link: "https://www.instagram.com/reel/DFfs14VyPz4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
-
   {
-    title: "Weather App",
-    img: img3,
-    desc: "Responsive app showing real-time weather data using API integration.",
-    skills: ["HTML", "CSS", "API"]
-  },
-
-  {
-    title: "Blog Website",
-    img: img4,
-    desc: "Clean and simple blogging platform with markdown support.",
-    skills: ["HTML", "Tailwind", "JavaScript"]
-  },
-
-  {
-    title: "Game Landing Page",
-    img: img5,
-    desc: "Landing page for a game with animations and parallax effects.",
-    skills: ["HTML", "CSS", "GSAP"]
-  },
-
-  {
-    title: "Task Manager",
-    img: img6,
-    desc: "Task tracking web app with CRUD features and clean UI.",
-    skills: ["HTML", "CSS", "JS"]
+    title: "Video Teaser Go Green UNNES 2026",
+    img: thumb3,
+    desc: "Memproduksi video teaser promosi untuk meningkatkan awareness dan antusiasme audiens terhadap program Go Green UNNES 2026.",
+    skills: ["CapCut", "Video Editing", "Videography"],
+    link: "https://www.instagram.com/reel/DYyGbFQBJ9y/?utm_source=ig_web_copy_link"
   }
 ];
 
-export default function Project() {
-
+function Projects() {
   return (
-
-    <section className="project reveal" id="project">
-
+    <div className="projects" id="project">
       <div className="title">
-        <h2>Project</h2>
+        <h2>My Project</h2>
       </div>
-
+      
       <div className="projects-container">
-
         {projects.map((project, index) => (
-
           <div className="project-card" key={index}>
-
-            <img src={project.img} alt={project.title} />
-
-            <h3>{project.title}</h3>
-
-            <p>{project.desc}</p>
-
-            <div className="skills">
-              {project.skills.map((skill, i) => (
-                <a href="#" key={i}>{skill}</a>
-              ))}
+            
+                    <div className="project-img">
+              <img 
+                src={project.img} 
+                alt={project.title} 
+                style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }} 
+              />
             </div>
 
-            <div className="btns">
-
-              <a href="#" className="btn">
-                <i className="fab fa-github"></i> GitHub
-              </a>
-
-              <a href="#" className="btn">
-                <i className="fas fa-external-link-alt"></i> Live Demo
-              </a>
+            <div className="project-info">
+              <h3>{project.title}</h3>
+              <p>{project.desc}</p>
+              
+              <div className="project-skills">
+                {project.skills.map((skill, i) => (
+                  <span key={i} className="skill-tag">{skill}</span>
+                ))}
+              </div>
+              
+              <div className="project-links">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                  Lihat Video
+                </a>
+              </div>
 
             </div>
-
           </div>
-
         ))}
-
       </div>
-
-    </section>
-
+    </div>
   );
-
 }
+
+export default Projects;
