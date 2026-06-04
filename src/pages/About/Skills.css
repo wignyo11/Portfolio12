@@ -87,3 +87,17 @@
     transform: translateX(-50%);
   }
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .skills {
+    margin-top: 60px;
+  }
+  .skills h3 {
+    font-size: 24px;
+  }
+  .skills-track {
+    font-size: 40px; /* Mengecilkan ukuran ikon di HP */
+    gap: 40px; /* Merapatkan jarak antar ikon */
+  }
+}

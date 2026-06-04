@@ -291,3 +291,15 @@
     transform: translateX(100%) rotate(25deg);
   }
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .contact {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}

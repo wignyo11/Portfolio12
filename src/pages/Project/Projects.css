@@ -222,3 +222,15 @@
   box-shadow: 0 0 15px rgba(5, 125, 224, 0.5);
   transform: translateY(-2px);
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Memaksa 1 kartu per baris di HP */
+    padding: 10px 20px;
+  }
+
+  .project-info {
+    padding: 20px 15px;
+  }
+}

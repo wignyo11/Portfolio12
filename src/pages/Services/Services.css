@@ -104,3 +104,15 @@
 .service-card:hover p {
   opacity: 1;
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .contact {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}

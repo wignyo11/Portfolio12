@@ -117,3 +117,32 @@ h1 span {
 }
 
 
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse; /* Menaruh foto di atas, teks di bawah */
+    margin: 0 20px; /* Menghapus margin 120px */
+    padding: 20px;
+    align-items: center;
+    text-align: center; /* Membuat teks rata tengah di HP */
+    gap: 40px;
+  }
+
+  .title1 h1 {
+    font-size: 32px; /* Mengecilkan judul */
+  }
+
+  .title1 h1::after {
+    left: 50%;
+    transform: translateX(-50%); /* Menengahkan garis neon */
+  }
+
+  .btn1 {
+    justify-content: center; /* Menengahkan tombol */
+  }
+
+  .photo {
+    width: 100%;
+    max-width: 280px;
+  }
+}

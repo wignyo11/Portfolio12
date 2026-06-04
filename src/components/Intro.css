@@ -98,3 +98,15 @@
     transform: scale(1.5);
   }
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 28px; /* Mengecilkan tulisan AMINE / WIGNYO */
+  }
+  .main-text {
+    font-size: 22px; /* Mengecilkan teks selamat datang */
+    text-align: center;
+    width: 90%;
+  }
+}

@@ -82,3 +82,19 @@
     justify-content: center;
   }
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Mengubah susunan menyamping menjadi atas-bawah */
+    padding: 30px 20px;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .link {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

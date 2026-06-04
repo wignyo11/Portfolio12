@@ -145,3 +145,30 @@
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 60px #00f0ff;
 }
+
+/* --- RESPONSIVE MOBILE (HP) --- */
+@media screen and (max-width: 768px) {
+  .about {
+    margin: 0 20px 80px 20px;
+    padding: 40px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title2 h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .info {
+    flex-direction: column; /* Mengubah card statistik menjadi atas bawah */
+  }
+
+  .img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
