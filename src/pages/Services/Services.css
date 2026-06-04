@@ -107,12 +107,32 @@
 
 /* --- RESPONSIVE MOBILE (HP) --- */
 @media screen and (max-width: 768px) {
-  .contact {
-    margin: 40px 20px;
-    padding: 20px;
+  .services {
+    margin: 40px 10px;
+    padding: 20px 0;
   }
 
-  .contact-container {
-    flex-direction: column;
+  .title h2 {
+    font-size: 28px;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 20px 30px 20px;
+    gap: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .services-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-card {
+    flex: 0 0 80%; /* Lebar kartu 80% dari layar HP */
+    scroll-snap-align: center;
   }
 }

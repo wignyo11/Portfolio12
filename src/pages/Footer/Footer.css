@@ -86,15 +86,38 @@
 /* --- RESPONSIVE MOBILE (HP) --- */
 @media screen and (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Mengubah susunan menyamping menjadi atas-bawah */
-    padding: 30px 20px;
-    text-align: center;
-    gap: 20px;
+    flex-direction: row; /* Memaksa elemen tetap menyamping */
+    flex-wrap: wrap; /* Mengizinkan elemen turun jika layar terlalu sempit */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
   }
   
+  .social-icons {
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
   .link {
+    flex-direction: row; /* Menu Navigasi tetap berjejer ke samping */
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+  }
+  
+  .link a {
+    font-size: 11px; /* Huruf sedikit dikecilkan agar tidak saling tabrak */
+  }
+
+  .footer p {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    order: 3; /* Memaksa teks copyright turun ke baris paling bawah */
   }
 }
